@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 46px;
+}
+body {
+    margin: 0px;
+    background-color: #201f1f;
+    color: #ffffff;
+    font-family: 'montserrat';
+    overflow-x: hidden;
+}
+header {
+    width: 100%;
+    background-color: #201f1f;
+    padding-block: 10px;
+}
+.navbar {
+    width: 100%;
+    padding-inline: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar > a {
+    margin-block: auto;
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .navbar-items {
+    width: 70%;
+    text-align: right;
+}
+
+.navbar .navbar-items ul {
+}
+
+.navbar .navbar-items ul li {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding-inline: 16px;
+}
+
+.hero {
+    width: 100%;
+    padding-inline: 172px;
+    padding-block: 72px;
+}
+
+.hero .container {
+    display: flex;
+    width: 100%;
+}
+
+.hero .container .info {
+    margin-right: 156px;
+}
+
+.hero .container .info h2 {
+    font-size: 30px;
+}
+
+/* .hero .container .info h1 {
+    font-size: 46px;
+} */
+
+.hero .container .info p {
+    color: #bfbfbf;
+    margin-block: 48px;
+    line-height: 1.5;
+}
+
+.button-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.button-block button {
+    border: none;
+    border-radius: 3px;
+    background-color: #199cdb;
+    min-width: 156px;
+    padding-block: 16px;
+}
+
+.button-block button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-block button a svg {
+    width: 24px;
+    fill: white;
+}
+.button-block button a span {
+    font-weight: bold;
+    margin-left: 8px;
+}
+.button-block ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.button-block ul li {
+    display: inline-block;
+    margin-inline: 24px;
+}
+/* .button-block ul li a svg {
+    width: 40px;
+    fill: #bfbfbf;
+} */
+
+.hero .container .image img {
+    width: 280px;
+    background-color: #383838;
+    filter: grayscale();
+}
+
+#project {
+    margin-block: 80px;
+    padding-inline: 172px;
+    /* width: 100%; */
+}
+
+#project .project-container {
+    width: 100%;
+    /* background-color: red; */
+}
+
+#project .project-container .project-list {
+    width: 100%;
+    display: flex;
+}
+
+#project .project-container .project-list a {
+    position: relative;
+    display: block;
+    /* width: 100px; */
+    margin-bottom: 48px;
+    width: 100%;
+    /* height: 625px; */
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+
+#project .project-container .project-list a::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s;
+}
+
+#project .project-container .project-list a:hover::after {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* content: attr(data-title);
+    text-align: center;
+    padding-block: 50%; */
+}
+
+#project .project-container .project-list a::before {
+    content: attr(data-title);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-size: 32px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+#project .project-container .project-list a:hover::before {
+    opacity: 1;
+}
+
+#project .project-container .project-list a img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: transform 0.3s;
+}
+
+#project .project-container .project-list a:hover img {
+    transform: scale(1.1);
+}
+
+#contact {
+    margin-bottom: 80px;
+    padding-inline: 172px;
+}
+
+#contact .contact-container {
+    padding-inline: 80px;
+}
+
+#contact .contact-container form label {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+/* #contact .contact-container form input {
+    padding: 16px;
+} */
+#contact .contact-container form input,
+#contact .contact-container form textarea {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 16px;
+    font-size: 16px;
+}
+
+#contact .contact-container form textarea {
+    height: 128px;
+    resize: vertical;
+}
+
+#contact .contact-container form button {
+    background-color: #199cdb;
+    width: 100%;
+    padding: 16px;
+    margin-top: 24px;
+    /* margin: auto; */
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+.footer {
+    padding-inline: 172px;
+    background-color: #161616;
+}
+
+.footer .footer-container {
+    width: 100%;
+    text-align: center;
+    padding-inline: 312px;
+}
+
+.footer .footer-container ul {
+    margin: 0;
+    padding: 0;
+    padding-block: 8px;
+    list-style-type: none;
+    border-bottom: 2px solid #383838;
+}
+
+.footer .footer-container ul li {
+    display: inline-block;
+    /* list-style-type: none; */
+    margin-inline: 24px;
+    /* list-style-position: outside; */
+}
+
+.footer .footer-container div {
+    padding-block: 8px;
+}
