@@ -19,8 +19,18 @@ body {
 }
 header {
     width: 100%;
-    background-color: #201f1f;
+    /* background-color: #201f1f; */
     padding-block: 10px;
+    z-index: 7;
+    top: 0;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    background-color: #161616;
 }
 .navbar {
     width: 100%;
@@ -53,6 +63,7 @@ header {
 
 .hero {
     width: 100%;
+    margin-top: 80px;
     padding-inline: 172px;
     padding-block: 72px;
 }
@@ -60,6 +71,8 @@ header {
 .hero .container {
     display: flex;
     width: 100%;
+    /* margin-inline: 172px; */
+    /* min-width: 990px; */
 }
 
 .hero .container .info {
@@ -130,7 +143,7 @@ header {
 }
 
 #project {
-    margin-block: 80px;
+    margin-block: 72px;
     padding-inline: 172px;
     /* width: 100%; */
 }
@@ -205,12 +218,13 @@ header {
 }
 
 #contact {
-    margin-bottom: 80px;
+    margin-block: 72px;
+    /* margin-bottom: 80px; */
     padding-inline: 172px;
 }
 
 #contact .contact-container {
-    padding-inline: 80px;
+    /* padding-inline: 80px; */
 }
 
 #contact .contact-container form label {
@@ -247,6 +261,7 @@ header {
 }
 .footer {
     padding-inline: 172px;
+    padding-block: 32px;
     background-color: #161616;
 }
 
@@ -261,7 +276,7 @@ header {
     padding: 0;
     padding-block: 8px;
     list-style-type: none;
-    border-bottom: 2px solid #383838;
+    border-bottom: 2px solid #bfbfbf;
 }
 
 .footer .footer-container ul li {
