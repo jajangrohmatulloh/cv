@@ -20,7 +20,7 @@ body {
 header {
     width: 100%;
     /* background-color: #201f1f; */
-    padding-block: 10px;
+    padding-block: 24px;
     z-index: 7;
     top: 0;
     position: absolute;
@@ -51,7 +51,7 @@ header {
 
 .navbar > a {
     margin-block: auto;
-    width: 30%;
+    width: auto;
     font-size: 20px;
     font-weight: bold;
 }
@@ -61,11 +61,13 @@ header {
 }
 
 .navbar .navbar-items {
-    width: 70%;
-    text-align: right;
+    /* width: 70%;
+    text-align: right; */
+    margin-left: auto;
 }
 
 .navbar .navbar-items ul {
+    margin: 0;
 }
 
 .navbar .navbar-items ul li {
@@ -156,6 +158,7 @@ main {
 
 .hero .container .image img {
     width: 280px;
+    margin-left: auto;
     /* background-color: #383838; */
     background: linear-gradient(to bottom, #383838, #262626);
     filter: grayscale();
@@ -306,7 +309,7 @@ main {
     padding-block: 8px;
 }
 
-@media screen and (max-width: 732px) {
+@media screen and (max-width: 991.98px) {
     h1 {
         font-size: 30px;
         margin: 0;
@@ -319,23 +322,36 @@ main {
     header {
         /* display: none; */
         padding: 0;
-        background-color: black;
+        /* background-color: black; */
+        height: 64px;
+        overflow: hidden;
+        transition: height 0.3s;
     }
 
     .navbar {
         padding-inline: 16px;
+        padding-top: 8px;
+
+        flex-wrap: wrap;
+
+        /* flex-direction: row; */
     }
 
     .navbar > a {
         font-size: 16px;
-        width: 100%;
+        /* width: 100%; */
     }
 
     .navbar .hamburger {
-        float: right;
+        /* float: right; */
+        margin-block: auto;
+        margin-left: auto;
+        /* width: 100%; */
         display: flex;
         padding: 16px;
+        padding-right: 0px;
         flex-direction: column;
+        justify-content: center;
     }
 
     .navbar .hamburger div {
@@ -360,12 +376,37 @@ main {
     }
 
     .hamburger.toggle div:last-child {
+        margin-bottom: 0px;
         transform: rotate(-45deg) translateX(8px);
     }
 
+    /* .navbar break {
+        flex-basis: 100%;
+    } */
+
     .navbar .navbar-items {
-        display: none;
+        width: 100%;
+        text-align: left;
     }
+
+    header.navbar-items-collapse {
+        height: 167px;
+        background-color: #161616;
+    }
+
+    .navbar .navbar-items ul {
+        padding: 0;
+    }
+
+    .navbar .navbar-items ul li {
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 0px;
+    }
+
     .hero {
         text-align: center;
         margin-top: 0px;
@@ -436,6 +477,7 @@ main {
     }
 
     main {
+        margin-top: 56px;
         padding: 16px;
     }
 }
